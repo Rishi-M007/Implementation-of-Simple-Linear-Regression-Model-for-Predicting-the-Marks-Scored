@@ -12,8 +12,9 @@ To write a program to predict the marks scored by a student using the simple lin
 2. Set variables for assigning dataset values.
 3. Import linear regression from sklearn
 4. Assign the points for representing in the graph.
-5.Predict the regression for marks by using the representation of the graph.
-6.Compare the graphs and hence we obtained the linear regression for the given datas.
+5. Predict the regression for marks by using the representation of the graph.
+6. Compare the graphs and hence we obtained the linear regression for the given datas.
+
 ## Program:
 ```
 /*
@@ -67,8 +68,13 @@ rmse=np.sqrt(mse)
 print("RMSE= ",rmse)
 ```
 ## Output:
-![simple linear regression model for predicting the marks scored](sam.png)
-
+![OUTPUT](./iml11.png)
+![OUTPUT](./iml12.png)
+![OUTPUT](./iml13.png)
+![OUTPUT](./iml14.png)
+![OUTPUT](./iml15.png)
+![OUTPUT](./iml16.png)
+![OUTPUT](./iml17.png)
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
