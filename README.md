@@ -10,52 +10,47 @@ To write a program to predict the marks scored by a student using the simple lin
 ## Algorithm
 1. Import the standard Libraries.
 2. Set variables for assigning dataset values.
-3. Import linear regression from sklearn
+3. Import linear regression from sklearn.
 4. Assign the points for representing in the graph.
 5. Predict the regression for marks by using the representation of the graph.
 6. Compare the graphs and hence we obtained the linear regression for the given datas.
-
 ## Program:
-```
-/*
+```python
+
 Program to implement the simple linear regression model for predicting the marks scored.
-Developed by: Rishi.M
-RegisterNumber:  212222230119
-*/
+Developed by: Sai Praneeth K
+RegisterNumber: 212222230067  
 ```
-```
+```python
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import mean_absolute_error,mean_squared_error
 df=pd.read_csv('student_scores.csv')
-print(df)
-df.head(0)
-df.tail(0)
-print(df.head())
-print(df.tail())
+df.head()
+df.tail()
 x = df.iloc[:,:-1].values
-print(x)
+x
 y = df.iloc[:,1].values
-print(y)
+y
 from sklearn.model_selection import train_test_split
 x_train,x_test,y_train,y_test=train_test_split(x,y,test_size=1/3,random_state=0)
 from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(x_train,y_train)
 y_pred = regressor.predict(x_test)
-print(y_pred)
-print(y_test)
+y_pred
+y_test
 #Graph plot for training data
 plt.scatter(x_train,y_train,color='black')
-plt.plot(x_train,regressor.predict(x_train),color='blue')
+plt.plot(x_train,regressor.predict(x_train),color='purple')
 plt.title("Hours vs Scores(Training set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
 plt.show()
 #Graph plot for test data
-plt.scatter(x_test,y_test,color='black')
-plt.plot(x_train,regressor.predict(x_train),color='red')
+plt.scatter(x_test,y_test,color='red')
+plt.plot(x_train,regressor.predict(x_train),color='blue')
 plt.title("Hours vs Scores(Testing set)")
 plt.xlabel("Hours")
 plt.ylabel("Scores")
@@ -67,14 +62,30 @@ print('MAE = ',mae)
 rmse=np.sqrt(mse)
 print("RMSE= ",rmse)
 ```
+
 ## Output:
-![OUTPUT](./iml11.png)
-![OUTPUT](./iml12.png)
-![OUTPUT](./iml13.png)
-![OUTPUT](./iml14.png)
-![OUTPUT](./iml15.png)
-![OUTPUT](./iml16.png)
-![OUTPUT](./iml17.png)
+### Head values:
+![output](/2.1.png)
+
+### Tail values:
+![output](/2.2.png)
+
+### X values:
+![output](/2.3.png)
+
+### Y values:
+![output](/2.4.png)
+
+### Predicted values of X and Y:
+![output](/2.5.png)
+![output](/2.6.png)
+
+### Training set and Testing set:
+![output](/2.7.png)
+
+### MSE,MAE AND RMSE:
+![output](/Screenshot%20(158).png)
 
 ## Result:
 Thus the program to implement the simple linear regression model for predicting the marks scored is written and verified using python programming.
+
